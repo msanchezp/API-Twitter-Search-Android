@@ -2,6 +2,7 @@ package org.brownielabs.android.list;
 
 import java.util.ArrayList;
 
+import org.brownielabs.android.R;
 import org.brownielabs.android.models.Tweet;
 import org.brownielabs.android.utils.BitmapManager;
 
@@ -12,8 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.clientebuscadortwitter.R;
 
 public class TweetAdapter extends ArrayAdapter<Tweet>{
 
