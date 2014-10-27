@@ -3,7 +3,21 @@ package org.brownielabs.android.models;
 import org.brownielabs.android.utils.DateUtils;
 
 public class Tweet {
-	private String name, screenName, profileImageUrl, text, createdAt;
+	
+	private String id;
+	private String name;
+	private String screenName;
+	private String profileImageUrl;
+	private String text; 
+	private String createdAt;
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -18,7 +32,7 @@ public class Tweet {
 	}
 
 	public void setScreenName(String screenName) {
-		this.screenName = "@" + screenName;
+		this.screenName = screenName;
 	}
 
 	public String getProfileImageUrl() {
@@ -42,6 +56,6 @@ public class Tweet {
 	}
 
 	public void setCreatedAt(String createdAt) {
-		this.createdAt = DateUtils.setDateFormat(createdAt);
+		this.createdAt = createdAt;
 	}
 }

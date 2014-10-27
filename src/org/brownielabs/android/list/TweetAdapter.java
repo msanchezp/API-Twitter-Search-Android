@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.brownielabs.android.R;
 import org.brownielabs.android.models.Tweet;
 import org.brownielabs.android.utils.BitmapManager;
+import org.brownielabs.android.utils.DateUtils;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -52,9 +53,9 @@ public class TweetAdapter extends ArrayAdapter<Tweet>{
 		ViewHolder holder = (ViewHolder)convertView.getTag();
 		BitmapManager.getInstance().loadBitmap(tweets.get(position).getProfileImageUrl(), holder.avatar);
 		holder.name.setText(tweets.get(position).getName());
-		holder.screenName.setText(tweets.get(position).getScreenName());
+		holder.screenName.setText("@" + tweets.get(position).getScreenName());
 		holder.text.setText(tweets.get(position).getText());
-		holder.createdAt.setText(tweets.get(position).getCreatedAt());
+		holder.createdAt.setText(DateUtils.setDateFormat(tweets.get(position).getCreatedAt()));
 		
 		return convertView;
 	}
